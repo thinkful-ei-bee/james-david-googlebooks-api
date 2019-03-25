@@ -49,14 +49,6 @@ class App extends Component {
       .then(res => {console.log(res);
         this.generateBookArr(res)})
       .catch(e => this.handleError(e))
-
-//name  --  res.items[0].volumeInfo.title
-//picture -- res.items[0].volumeInfo.imageLinks.thumbnail (http address str)
-//author -- res.items[0].authors[0]
-//price -- res.items[0].saleInfo.listPrice {amount: number, currencyCode: str}
-//short description -- res.items[0].searchInfo.textSnippet
-
-
   }; 
 
   updateSearchTerm = (term) => {
@@ -82,7 +74,7 @@ class App extends Component {
       <div className="App">
        <Header />
        <Search handleSearch={this.handleSearch} printType={this.state.printType} searchTerm={this.state.searchTerm} filter={this.state.filter} updateSearchTerm={this.updateSearchTerm} updatePrintType={this.updatePrintType} updateFilter={this.updateFilter} />
-       <BookList />
+       <BookList books={this.state.books}/>
       </div>
     );
   }
