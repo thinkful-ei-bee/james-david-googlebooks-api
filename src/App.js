@@ -7,7 +7,9 @@ class App extends Component {
 
   state = {
     books: [],
-    searchTerm: '',
+    searchTerm: 'abc',
+    printType: 'all',
+    filter: 'ebooks',
     error: null,
     loading: false
   }
@@ -17,12 +19,29 @@ class App extends Component {
     console.log(e)
   }; 
 
+  updateSearchTerm = (term) => {
+    this.setState({
+      searchTerm: term
+    });
+  }
+
+  updatePrintType = (val) => {
+    this.setState({
+      printType: val
+    })
+  }
+
+  updateFilter = (val) => {
+    this.setState({
+      filter: val
+    })
+  }
 
   render() {
     return (
       <div className="App">
        <Header />
-       <Search handleSearch={this.handleSearch}/>
+       <Search handleSearch={this.handleSearch} printType={this.state.printType} searchTerm={this.state.searchTerm} filter={this.state.filter} updateSearchTerm={this.updateSearchTerm} updatePrintType={this.updatePrintType} updateFilter={this.updateFilter} />
        <BookList />
       </div>
     );
