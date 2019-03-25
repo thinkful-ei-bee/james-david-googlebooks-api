@@ -27,7 +27,7 @@ class App extends Component {
       const newBookObj = {};
       newBookObj.name = ((obj.items[index] || {}).volumeInfo || {}).title;
       newBookObj.picture = (((obj.items[index] || {}).volumeInfo).imageLinks || {}).thumbnail;
-      newBookObj.author = (obj.items[index] || {}).authors;
+      newBookObj.author = ((obj.items[index] || {}).volumeInfo).authors;
       newBookObj.price = ((obj.items[index] || {}).saleInfo || {}).listPrice;
       newBookObj.description = ((obj.items[index] || {}).searchInfo || {}).textSnippet;
       return newBookObj;
