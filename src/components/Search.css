@@ -1,0 +1,13 @@
+.searchParams {
+  color: black;
+  text-align: center;
+}
+
+.searchTerm {
+  background-color: grey;
+  color: black;
+}
+
+.searchFilters {
+  background-color: lightgray;
+}
