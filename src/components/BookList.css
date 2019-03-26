@@ -8,6 +8,7 @@ h2, h3 {
 
 li {
   list-style: none;
+  margin-top: 45px;
 }
 
 .thumbnail img {
