@@ -1,7 +1,12 @@
 h2, h3 {
+  display: inline;
   text-align: center;
 }
 
-.thumbnail {
+.bookDetails {
   display: inline-block;
+}
+
+li {
+  list-style: none;
 }

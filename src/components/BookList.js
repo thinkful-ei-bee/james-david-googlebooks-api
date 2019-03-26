@@ -20,9 +20,18 @@ export default class BookList extends React.Component {
         const description = <div className="description">
                               <h3>{ book.description ? book.description : ''}</h3> 
                             </div>
-        return <div>
-          {name} {author} {price} {description} {picture}
-        </div>
+        return (
+          <div>
+           {name}
+           {author}
+           <div className="bookDetails">
+            {picture}
+           </div>
+           <div className="bookDetails">
+            {price} {description}
+           </div>
+         </div>
+        );
     }
 render() {
  return (
