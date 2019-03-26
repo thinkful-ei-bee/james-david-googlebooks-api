@@ -44,7 +44,7 @@ class App extends Component {
     const apiKey = 'AIzaSyAjXIfc-Z_K4owIljORps8JiiUEf82UKD4';
     console.log('started search function');
     const {searchTerm, printType, filter} = this.state;
-    fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.searchTerm}&filter=${this.state.filter}&printType=${this.state.printType}&key=${apiKey}`)
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&filter=${filter}&printType=${printType}&key=${apiKey}`)
       .then(res => res.json())
       .then(res => {console.log(res);
         this.generateBookArr(res)})
