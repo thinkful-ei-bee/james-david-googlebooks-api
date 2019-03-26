@@ -22,15 +22,14 @@ export default class BookList extends React.Component {
                             </div>
         return (
           <div>
-           {name}
-           {author}
-           <div className="bookDetails">
-            {picture}
+            <div>
+             {name}
+             {author}
            </div>
-           <div className="bookDetails">
-            {price} {description}
+             <div className="bookDetails">
+             {picture} {price} {description}
+             </div>
            </div>
-         </div>
         );
     }
 render() {
